@@ -1,0 +1,23 @@
+{
+    "name": "dh2y/think-sms",
+    "description": "sms for thinkphp5",
+    "homepage": "https://github.com/cinaofdai/think-sms",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dh2y",
+            "email": "xiaodai54_long@163.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/cinaofdai/think-sms/issues"
+    },
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "dh2y\\sms\\": "src/"
+        }
+    }
+}
