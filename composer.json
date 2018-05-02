@@ -3,7 +3,7 @@
     "description": "sms for thinkphp5",
     "homepage": "https://github.com/cinaofdai/think-sms",
     "license": "MIT",
-	"minimum-stability": "stable",
+    "minimum-stability": "stable",
     "version": "1.0",
     "authors": [
         {
