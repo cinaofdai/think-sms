@@ -3,8 +3,8 @@
  * Created by dh2y.
  * Blog: http://blog.csdn.net/sinat_22878395
  * Date: 2018/4/26 0026 16:26
- * for: 上海建周短信服务商
- * website: http://www.shjianzhou.com
+ * for: 中国建网短信服务商
+ * website: http://www.smschinese.cn/
  */
 
 namespace dh2y\sms\service;
