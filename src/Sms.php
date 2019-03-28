@@ -206,18 +206,30 @@ class Sms
 
     /**
      * 发送短信
-     * @param $phone
-     * @param $message
-     * @return mixed
+     * @param string $phone 手机号
+     * @param string $scene 场景
+     * @param array $param 替换的参数
+     * @return bool
      */
-    public function sendSms($phone, $message){
-        //签名不存在加上签名
-        if(!strstr($message,$this->config['signature'])){
-            $message = $message.$this->config['signature'];
+    public function sendSms($phone, $scene,$param = []){
+        //发送内容
+        if(!empty($param) && is_array($param)){
+            $one = [];$two = [];
+            foreach ($param as $key=>$value){
+                $one[] = '%'.$key.'%';
+                $two[] = $value;
+            }
+            $message = str_replace($one, $two,$this->scene[$scene]);
+            $message = '【'.$this->config['signature'].'】'.$message;
+            $this->message = $message;
+        }else{
+            $this->message = $this->scene[$scene];
         }
-
-        $this->message = $message;
-        if($this->handler->sendSms($phone, $message)){
+        //是否是测试发送
+        if($this->test){
+            return true;
+        }
+        if($this->handler->sendSms($phone, $this->message)){
             return true;
         }else{
             $this->setError('短信发送失败！');
