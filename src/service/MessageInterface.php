@@ -10,7 +10,7 @@
 namespace dh2y\sms\service;
 
 
-use think\Config;
+use think\facade\Config;
 
 abstract class MessageInterface
 {

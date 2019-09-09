@@ -9,7 +9,7 @@
 namespace dh2y\sms;
 
 
-use think\Config;
+use think\facade\Config;
 
 
 /** .-----------------------------使用说明---------------------------------

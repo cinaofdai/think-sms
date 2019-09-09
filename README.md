@@ -11,9 +11,18 @@ composer require dh2y/think-sms
 或者
 
 ### 二、require安装
+
+  适配5.0
 ```
 "require": {
-        "dh2y/think-sms":"*"
+        "dh2y/think-sms":"1.*"
+},
+```
+
+  适配5.1
+```
+"require": {
+        "dh2y/think-sms":"2.*"
 },
 ```
 
