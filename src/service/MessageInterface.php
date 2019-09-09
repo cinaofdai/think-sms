@@ -32,7 +32,7 @@ abstract class MessageInterface
      * @param array $config 短信配置
      */
     public function __construct($config = array()){
-        if(empty( $config )&& $C = Config::get('sms')){
+        if(empty( $config )&& $C = Config::get('sms.')){
             $this->config = $C['SMS_SDK'];
         }
         /* 获取配置 */
